@@ -1,0 +1,123 @@
+:root {
+  --blue-600: rgb(55, 125, 255);
+  --blue-200: rgba(55, 125, 255, 0.2);
+  --gray-500: rgb(130, 137, 151);
+  --slate-600: rgb(13, 17, 35);
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-regular: 400;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-5xl: 3rem;
+  --rounded-lg: 0.625rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  color: var(--blue-600);
+  background: var(--blue-200);
+  padding: 1rem 2rem;
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  border-radius: var(--rounded-lg);
+}
+
+.btn-primary {
+  background-color: var(--blue-600);
+  color: white;
+}
+
+.header {
+  background-color: var(--slate-600);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 0 1rem;
+  flex-direction: row-reverse;
+}
+
+.header-hamburger,
+.header-close {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 1rem;
+  margin: -1rem;
+  cursor: pointer;
+}
+
+.header-close {
+  visibility: hidden;
+  opacity: 0;
+  transform: rotate(45deg);
+  z-index: -1;
+  pointer-events: none;
+  transition: all 100ms ease-out;
+}
+
+.header-close.active {
+  visibility: visible;
+  opacity: 1;
+  transform: rotate(0);
+  z-index: 1;
+  pointer-events: all;
+}
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 5rem;
+  background-color: var(--slate-600);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 100ms ease-out;
+}
+
+.nav.active {
+  opacity: 1;
+  z-index: 10;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.nav.active ~ .header-hamburger {
+  display: none;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-weight: var(--font-semibold);
+  width: 100%;
+}
+
+.nav ul a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+  font-size: var(--text-lg);
+}
+
+.nav-btn {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
