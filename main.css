@@ -19,6 +19,14 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+html,
+body {
+  height: 100%;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
 
 .btn {
   outline: none;
