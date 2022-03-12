@@ -2,6 +2,7 @@
   --blue-600: rgb(55, 125, 255);
   --blue-200: rgba(55, 125, 255, 0.2);
   --gray-500: rgb(130, 137, 151);
+  --gray-200: rgb(205, 205, 205);
   --slate-600: rgb(13, 17, 35);
   --font-bold: 700;
   --font-semibold: 600;
@@ -35,15 +36,20 @@
   color: white;
 }
 
-.header {
-  background-color: var(--slate-600);
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
-  padding: 0 1rem;
   flex-direction: row-reverse;
   overflow: hidden;
+  height: 5rem;
+  max-width: 1312px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.header {
+  background-color: var(--slate-600);
 }
 
 .header-hamburger,
@@ -111,11 +117,12 @@
 }
 
 .nav ul a {
-  text-decoration: none;
   color: white;
   padding: 1rem;
   display: block;
   font-size: var(--text-lg);
+  position: relative;
+  text-decoration: none;
 }
 
 .nav-btn {
@@ -123,12 +130,67 @@
   margin-top: 1rem;
 }
 
+.main {
+  position: relative;
+}
+
+.hero {
+  background-color: var(--slate-600);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1312px;
+  margin: auto;
+  padding: 4rem 1rem;
+  justify-content: space-between;
+}
+
+.hero-right {
+  padding: 4rem 0;
+}
+
+.hero-right img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.hero-left h1 {
+  font-size: var(--text-5xl);
+  color: white;
+}
+
+.hero-left h1 span {
+  color: var(--blue-600);
+  display: block;
+}
+
+.hero-left p {
+  color: var(--gray-200);
+  max-width: 45ch;
+  font-size: var(--text-lg);
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+  }
+
+  .hero-right {
+    padding: 0;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .header-hamburger,
   .header-close {
     display: none;
   }
-  .header {
+  .header-container {
     flex-direction: row;
     height: 7.5rem;
   }
@@ -145,6 +207,27 @@
   .nav ul {
     flex-direction: row;
     width: auto;
+  }
+  .nav ul a {
+    padding: 0.8rem 1rem;
+  }
+  .nav ul a:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid transparent;
+  }
+  .nav ul a:hover::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(55, 125, 255, 0.05) 70%,
+      rgba(55, 125, 255, 0.25) 100%
+    );
+    border-bottom-color: var(--blue-600);
   }
   .nav-btn {
     margin-top: 0;

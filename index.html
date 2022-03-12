@@ -16,48 +16,67 @@
   <body>
     <div class="container">
       <header class="header">
-        <button class="header-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <a href="/">
-          <img src="./farfill-logo-light.png" width="100" alt="farfill logo" />
-        </a>
-        <nav class="nav">
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Use cases</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
-          <button class="btn btn-primary nav-btn">Contact us</button>
-        </nav>
-        <button class="header-hamburger">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div class="header-container">
+          <button class="header-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <a href="/">
+            <img src="./farfill-logo-light.png" width="100" alt="farfill logo" />
+          </a>
+          <nav class="nav">
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Use cases</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+            <button class="btn btn-primary nav-btn">Contact us</button>
+          </nav>
+          <button class="header-hamburger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </header>
-      <main></main>
+      <main class="main">
+        <section class="hero">
+          <div class="hero-container">
+            <section class="hero-left">
+              <h1>Farfill <span>Where Ship Happens</span></h1>
+              <p>
+                Effortless e-commerce fulfilment for consumer brands. Should you want to take your
+                indie brand Global or whether you require access to every marketplace out there or
+                just seamless packaging, you have our unwavering support.
+              </p>
+              <button class="btn btn-primary">Contact us</button>
+            </section>
+            <section class="hero-right">
+              <img src="./hero-image.svg" alt="" />
+            </section>
+          </div>
+        </section>
+      </main>
       <footer></footer>
     </div>
     <script src="./main.js" defer></script>
