@@ -29,11 +29,16 @@
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
   border-radius: var(--rounded-lg);
+  cursor: pointer;
+  transition: transform 100ms ease-out;
 }
 
 .btn-primary {
   background-color: var(--blue-600);
   color: white;
+}
+.btn-primary:active {
+  transform: scale(0.9);
 }
 
 .header-container {
